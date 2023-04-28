@@ -1,178 +1,15 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper";
-import { BsArrowRightCircle } from "react-icons/bs";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import hero2 from "../../assets/images/hero2.jpg";
+import hero3 from "../../assets/images/hero3.jpg";
+import YouPain from "../../assets/images/YouPain.jpg";
 import { Link } from "react-router-dom";
+
 
 const Hero = () => {
   return (
     <>
-      <div className="hero_area">
-        <nav className="navbar navbar-expand-lg">
-          <div className="container">
-            <Link className="navbar-brand" to="/">
-              Fouemene Thierry
-            </Link>
-            <button
-              className="navbar-toggler"
-              id="navbar-respon-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample"
-              aria-controls="offcanvasExample"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon" id="toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav ms-auto mb-2 pe-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link
-                    className="nav-link active menu-active"
-                    aria-current="page"
-                    to="/"
-                  >
-                    HOME
-                  </Link>
-                </li>
-                <li className="nav-item menu-active dropdown">
-                  <Link
-                    className="nav-link menu-active dropdown-toggle"
-                    to="/"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    WORKS
-                  </Link>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link className="dropdown-item" to="/">
-                        Action
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" to="/">
-                        Another action
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" to="/">
-                        Something else here
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link menu-active" to="/">
-                    PROJECTS
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link menu-active" to="/">
-                    PUBLICATIONS
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link menu-active" to="/">
-                    BIOGRAPHY
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link menu-active" to="/">
-                    COMMING SOON
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link menu-active" to="/">
-                    ARCHIVES
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        <div className="vh-100 d-flex align-items-center">
-          <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-7">
-                    <div class="detail-box">
-                      <div>
-                        <h1 className="text-white">
-                          Welcome To
-                          <span>Content Writing Services</span>
-                        </h1>
-                        <p className="text-white">
-                          It is a long established fact that a reader will be
-                          distracted by the readable content of a page when
-                          looking
-                        </p>
-                        <div class="btn-box">
-                          <a href="" class="btn-1">
-                            Contact Us
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-7">
-                    <div class="detail-box">
-                      <div>
-                        <h1 className="text-white">
-                          Welcome To
-                          <span>Content Writing Services</span>
-                        </h1>
-                        <p className="text-white">
-                          It is a long established fact that a reader will be
-                          distracted by the readable content of a page when
-                          looking
-                        </p>
-                        <div class="btn-box">
-                          <a href="" class="btn-1">
-                            Contact Us
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <div className="swiper-button-next"><BsArrowRightCircle /></div>
-            <div className="swiper-button-prev"></div>
-          </Swiper>
-        </div>
-      </div>
-
       {/* offcanvas */}
       <div
         class="offcanvas offcanvas-start"
@@ -182,7 +19,7 @@ const Hero = () => {
       >
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-            Fouemene Thierry
+            Thierry Fouomene 
           </h5>
           <button
             type="button"
@@ -192,33 +29,6 @@ const Hero = () => {
           ></button>
         </div>
         <div className="offcanvas-body text-bg-dark">
-          {/* <div class="dropdown mt-3">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-            >
-              Dropdown button
-            </button>
-
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="#">
-                  Action
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  Another action
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </li>
-            </ul>
-          </div> */}
           <ul className="navbar-nav ms-auto mb-4 pe-2 mb-lg-0">
             <li className="nav-item">
               <Link
@@ -284,8 +94,94 @@ const Hero = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </div> 
       {/* fin offcanvas */}
+      
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active"
+          >
+            <img src={hero3}  class="d-block w-100 hero-slider" alt="hero" />
+            <div class="carousel-caption">
+              <img
+                src={YouPain}
+                className="img-fluid Yourpain animate__animated animate__bounceInLeft"
+                alt="Yourpain"
+              />
+              <h5
+                className="animate__animated animate__bounceInRight"
+                style={{ animationDelay: "1s" }}
+              >
+                Second slide label
+              </h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div
+            class="carousel-item"
+          >
+            <img src={hero2}  class="d-block w-100 hero-slider" alt="hero" />
+            <div class="carousel-caption carousel-customer">
+              <img
+                src={YouPain}
+                className="img-fluid Yourpain animate__animated animate__bounceInLeft"
+                alt="Yourpain"
+              />
+              <h5
+                className=" mt-4 animate__animated animate__bounceInRight"
+                style={{ animationDelay: "1s" }}
+              >
+                Second slide label
+              </h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </>
   );
 };

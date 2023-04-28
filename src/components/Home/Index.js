@@ -6,6 +6,9 @@ const Home = () => {
     <>
         <Navbar />  
         <Hero />
+        <div>
+          dd
+        </div>
     </>
   )
 }
