@@ -1,0 +1,21 @@
+/* Navbar */
+
+@media (max-width: 768px) {
+    .container .navbar-brand {
+        font-size: 1.2em;
+        font-weight: 700;
+        color: #ffffff !important;
+        text-transform: uppercase;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none! important;
+      }
+}
+
+@media screen and (min-width : 991px) {
+   .hero_area .navbar{
+        padding: 10px 90px;
+    }
+
+}
