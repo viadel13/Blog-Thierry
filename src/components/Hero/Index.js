@@ -3,9 +3,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import hero2 from "../../assets/images/hero2.jpg";
 import hero3 from "../../assets/images/hero3.jpg";
-import YouPain from "../../assets/images/YouPain.jpg";
+import YouPain from "../../assets/images/you.png";
 import { Link } from "react-router-dom";
-
 
 const Hero = () => {
   return (
@@ -19,7 +18,7 @@ const Hero = () => {
       >
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-            Thierry Fouomene 
+            Thierry Fouomene
           </h5>
           <button
             type="button"
@@ -94,9 +93,9 @@ const Hero = () => {
             </li>
           </ul>
         </div>
-      </div> 
+      </div>
       {/* fin offcanvas */}
-      
+
       <div
         id="carouselExampleCaptions"
         class="carousel slide"
@@ -117,50 +116,44 @@ const Hero = () => {
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
         </div>
         <div class="carousel-inner">
-          <div
-            class="carousel-item active"
-          >
-            <img src={hero3}  class="d-block w-100 hero-slider" alt="hero" />
+          <div class="carousel-item active">
+            <img src={hero3} class="d-block  hero-slider" alt="hero" />
             <div class="carousel-caption">
-              <img
+              {/* <img
                 src={YouPain}
-                className="img-fluid Yourpain animate__animated animate__bounceInLeft"
+                className="img-fluid Yourpain"
                 alt="Yourpain"
-              />
-              <h5
-                className="animate__animated animate__bounceInRight"
-                style={{ animationDelay: "1s" }}
-              >
-                Second slide label
-              </h5>
+              /> */}
+              <h5>Second slide label</h5>
               <p>
                 Some representative placeholder content for the first slide.
               </p>
             </div>
           </div>
-          <div
-            class="carousel-item"
-          >
-            <img src={hero2}  class="d-block w-100 hero-slider" alt="hero" />
+          <div class="carousel-item">
+            <img src={hero2} class="d-block w-100 hero-slider" alt="hero" />
             <div class="carousel-caption carousel-customer">
-              <img
+              {/* <img
                 src={YouPain}
-                className="img-fluid Yourpain animate__animated animate__bounceInLeft"
+                className="img-fluid Yourpain"
                 alt="Yourpain"
-              />
-              <h5
-                className=" mt-4 animate__animated animate__bounceInRight"
-                style={{ animationDelay: "1s" }}
-              >
-                Second slide label
-              </h5>
+              /> */}
+              <h5 className=" mt-4">Second slide label</h5>
               <p>
                 Some representative placeholder content for the second slide.
               </p>
-
             </div>
+          </div>
+          <div class="carousel-item justify-content-center" id="slide-Your">
+            <img src={YouPain} className="d-block Yourpain" alt="Yourpain" />
           </div>
         </div>
         <button

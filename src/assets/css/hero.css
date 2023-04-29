@@ -1,13 +1,24 @@
 .hero-slider {
   filter: brightness(0.3) contrast(0.9);
   height: 100vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-item {
+	height: 100vh;
+	min-height: 300px;
 }
 
 .Yourpain{
-  border-radius: 50%;
-  width: 200px;
-  
+width: 100%;
+object-fit: cover;
+height: 100vh;
 }
+#slide-Your{
+  background-color: rgba(3, 3, 3, 0.349);
+}
+
 
 /* 
 .btn-box a {
