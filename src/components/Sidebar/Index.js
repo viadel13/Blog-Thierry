@@ -36,7 +36,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-item menu-active">
-            <a
+            <Link
               className="nav-link menu-active dropdown-toggle"
               href="#"
               role="button"
@@ -45,22 +45,22 @@ const Sidebar = () => {
               aria-expanded="false"
             >
               <span className="me-2"><FaProjectDiagram size={25} /></span>PORTFOLIO
-            </a>
+            </Link>
             <ul className=" collapse list-unstyled " id="portfolioDropdown">
               <li>
-                <Link className="dropdown-item ms-4" to="/">
+                <Link className="dropdown-item ms-5" to="/">
                   PROJECTS
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item ms-4" to="/">
+                <Link className="dropdown-item ms-5" to="/">
                   PRODUCTION
                 </Link>
               </li>
             </ul>
           </li>
           <li className="nav-item menu-active">
-            <a
+            <Link
               className="nav-link menu-active dropdown-toggle"
               href="#"
               role="button"
@@ -69,15 +69,15 @@ const Sidebar = () => {
               aria-expanded="false"
             >
               <span className="me-1 "><HiOutlineDocumentDuplicate size={25} /></span> ACTUALITES
-            </a>
+            </Link>
             <ul className="collapse list-unstyled" id="actualitesDropdown">
               <li>
-                <Link className="dropdown-item ms-4" to="/">
+                <Link className="dropdown-item ms-5" to="/">
                   COMING SOON
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item ms-4" to="/">
+                <Link className="dropdown-item ms-5" to="/">
                   TEXTES
                 </Link>
               </li>
@@ -94,7 +94,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="nav-item menu-active">
-            <a
+            <Link
               className="nav-link menu-active dropdown-toggle"
               href="#"
               role="button"
@@ -103,15 +103,15 @@ const Sidebar = () => {
               aria-expanded="false"
             >
               <span className="me-2 "><BiMessageError size={25} /></span>A PROPOS
-            </a>
+            </Link>
             <ul className="collapse list-unstyled" id="AproposDropdown">
               <li>
-                <Link className="dropdown-item ms-4" to="/">
+                <Link className="dropdown-item ms-5" to="/">
                   BIOGRAPHIE
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item ms-4" to="/">
+                <Link className="dropdown-item ms-5" to="/">
                   ARCHIVES
                 </Link>
               </li>
