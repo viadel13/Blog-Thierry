@@ -1,0 +1,19 @@
+#navbar-respon-toggler{
+    outline: none;
+  }
+  #navbar-respon-toggler:focus{
+    box-shadow: none;
+  }
+  
+  #offcanvasExample {
+    max-width: 70%;
+  }
+  .offcanvas-body ul li {
+    padding: 12px 0;
+  }
+  
+  #toggler-icon{
+    background-image: url('../images/menu.png');
+    background-size: 55px;
+  } 
+  

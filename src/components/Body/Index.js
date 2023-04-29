@@ -5,26 +5,37 @@ import { BsCameraReels, BsIncognito, BsLayers } from "react-icons/bs";
 const Body = () => {
   return (
     <div className="container mt-3">
-        <div className="d-flex justify-content-center mb-5">
+      <div className="row">
+        <div className="col-12">
+          <div className="d-flex justify-content-center mb-5">
             <div>
-                <span className="iconDescrip d-flex align-items-center mb-3"><BsCameraReels /></span>
-                <h3 className="text-center display-5 textIcon">Evenement</h3>
+              <span className="iconDescrip d-flex align-items-center mb-3">
+                <BsCameraReels />
+              </span>
+              <h3 className="text-center display-5 textIcon">Evenement</h3>
             </div>
             <div>
-                <span className="iconDescrip d-flex align-items-center mb-3"><BsIncognito /></span>
-                <h3 className="text-center display-5  textIcon">Evenement</h3>
+              <span className="iconDescrip d-flex align-items-center mb-3">
+                <BsIncognito />
+              </span>
+              <h3 className="text-center display-5  textIcon">Evenement</h3>
             </div>
-            <div>  
-                <span className="iconDescrip d-flex align-items-center mb-3"><BsLayers /></span>
-                <h3 className="text-center display-5 textIcon">Evenement</h3>
+            <div>
+              <span className="iconDescrip d-flex align-items-center mb-3">
+                <BsLayers />
+              </span>
+              <h3 className="text-center display-5 textIcon">Evenement</h3>
             </div>
+          </div>
         </div>
+      </div>
+
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 col-lg-6">
           <div class="card mb-3">
             <div class="row g-0">
               <div class="col-md-4">
-              <img
+                <img
                   src={affiche}
                   class="img-fluid rounded-start"
                   alt="affiche"

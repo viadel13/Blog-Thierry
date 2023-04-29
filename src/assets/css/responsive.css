@@ -1,118 +1,128 @@
 /* Navbar */
 
 @media (max-width: 768px) {
-    .container .navbar-brand {
-        font-size: 1.2em;
-        font-weight: 700;
-        color: #ffffff !important;
-        text-transform: uppercase;
-    }
+  .container-fluid .navbar-brand {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ffffff !important;
+    text-transform: uppercase;
+  }
 
-    .hero-slider {
-        filter: brightness(0.3) contrast(0.9);
-    }
+  .hero-slider {
+    filter: brightness(0.3) contrast(0.9);
+  }
 
-    .carousel-item {
-        height: 60vh;
+  .carousel-item {
+    height: 60vh;
 
-    }
-    .hero-slider {
-        filter: brightness(0.3) contrast(0.9);
-        height: 100%;
-        object-fit: cover;
-    }
-    .Yourpain{
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-    }
-    .carousel-caption{
-      margin: 5px;
-    }
+  }
 
-    /*ds */
+  .hero-slider {
+    filter: brightness(0.3) contrast(0.9);
+    height: 100%;
+    object-fit: cover;
+  }
 
-    .card {
-        display: flex;
-        flex-direction:row;
-        height: auto;
-      }
-      
-      .card .col-md-4 {
-        flex-basis: 0;
-        flex-grow: 0.6;
-      }
-      
-      .card .col-md-4 img {
-        height: 100%;
-        object-fit: cover;
-      }
-      
-      .card .col-md-8 {
-        flex-basis: 0;
-        flex-grow: 1;
-      }
-      
+  .Yourpain {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
 
-  
-      .iconDescrip{
-        font-size: 1.5em;
-        margin:  0 30px;
-        padding: 20px;
-        background-color: rgb(224, 60, 60);
-        border-radius: 50%;
-        color: white; 
-        box-shadow: 1px 4px 23px rgba(83, 83, 83, 0.712);  
-        justify-content: center;         
-    }
+  .carousel-caption {
+    margin: 5px;
+  }
 
-    .textIcon{
-        font-size: 1em !important;
-        color: rgb(44, 46, 46);
-    }
-    
+  /*ds */
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+
+  .card .col-md-4 {
+    flex-basis: 0;
+    flex-grow: 0.6;
+  }
+
+  .card .col-md-4 img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card .col-md-8 {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+
+
+  .iconDescrip {
+    font-size: 1.5em;
+    margin: 0 30px;
+    padding: 20px;
+    background-color: rgb(224, 60, 60);
+    border-radius: 50%;
+    color: white;
+    box-shadow: 1px 4px 23px rgba(83, 83, 83, 0.712);
+    justify-content: center;
+  }
+
+  .textIcon {
+    font-size: 1em !important;
+    color: rgb(44, 46, 46);
+  }
+
 
 }
 
 @media screen and (min-width : 991px) {
-    .hero_area .navbar {
-        padding: 10px 90px;
-    }
+  .hero_area .navbar {
+    padding: 10px 90px;
+  }
+ 
+  .card {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
 
-    .card {
-        display: flex;
-        flex-direction:row;
-        height: auto;
-      }
-      
-      .card .col-md-4 {
-        flex-basis: 0;
-        flex-grow: 0.8;
-      }
-      
-      .card .col-md-4 img {
-        height: 100%;
-        object-fit: cover;
-      }
-      
-      .card .col-md-8 {
-        flex-basis: 0;
-        flex-grow: 1;
-      }
+  .card .col-md-4 {
+    flex-basis: 0;
+    flex-grow: 0.8;
+  }
 
-      .iconDescrip{
-        font-size: 3.8em;
-        margin:  0 150px;
-        padding: 35px;
-        background-color: rgb(224, 60, 60);
-        border-radius: 50%;
-        color: white; 
-        box-shadow: 1px 4px 23px rgba(83, 83, 83, 0.712);           
-    }
+  .card .col-md-4 img {
+    height: 100%;
+    object-fit: cover;
+  }
 
-    .textIcon{
-        font-size: 2em !important;
-        color: rgb(44, 46, 46);
-    }
-      
+  .card .col-md-8 {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .iconDescrip {
+    font-size: 3.8em;
+    margin: 0 80px;
+    padding: 35px;
+    background-color: rgb(224, 60, 60);
+    border-radius: 50%;
+    color: white;
+    box-shadow: 1px 4px 23px rgba(83, 83, 83, 0.712);
+  }
+
+  .textIcon {
+    font-size: 2em !important;
+    color: rgb(44, 46, 46);
+  }
+
+  .container-fluid .navbar-brand {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #ffffff !important;
+    text-transform: uppercase;
+  }
+
 }
