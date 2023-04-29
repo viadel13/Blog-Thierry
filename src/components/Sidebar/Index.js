@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
-import { HiOutlineHome } from "react-icons/hi";
-import { GrWorkshop } from "react-icons/gr";
+import { HiOutlineHome, HiOutlineDocumentDuplicate } from "react-icons/hi";
+import { FaProjectDiagram } from "react-icons/fa";
+import { MdPersonOutline } from "react-icons/md";
+import { AiOutlineForm } from "react-icons/ai";
+import { BiMessageError, BiPhone } from "react-icons/bi";
 import "../../assets/css/sidebar.css";
-
 const Sidebar = () => {
   return (
     <div
@@ -42,7 +44,7 @@ const Sidebar = () => {
               data-bs-target="#portfolioDropdown"
               aria-expanded="false"
             >
-              <span className="me-1 "><GrWorkshop size={25} /></span>PORTFOLIO
+              <span className="me-2"><FaProjectDiagram size={25} /></span>PORTFOLIO
             </a>
             <ul className=" collapse list-unstyled " id="portfolioDropdown">
               <li>
@@ -66,7 +68,7 @@ const Sidebar = () => {
               data-bs-target="#actualitesDropdown"
               aria-expanded="false"
             >
-              <span className="me-1 "><HiOutlineHome size={25} /></span> ACTUALITES
+              <span className="me-1 "><HiOutlineDocumentDuplicate size={25} /></span> ACTUALITES
             </a>
             <ul className="collapse list-unstyled" id="actualitesDropdown">
               <li>
@@ -83,12 +85,12 @@ const Sidebar = () => {
           </li>
           <li className="nav-item">
             <Link className="nav-link menu-navigation menu-active" to="/">
-            <span className="me-1 "><HiOutlineHome size={25} /></span> AUTEUR
+            <span className="me-1 "><MdPersonOutline size={25} /></span> AUTEUR
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link menu-navigation menu-active" to="/">
-            <span className="me-1 "><HiOutlineHome size={25} /></span> DIRECTEUR ARTISTIQUE
+            <span className="me-1 "><AiOutlineForm size={25} /></span> DIRECTEUR ARTISTIQUE
             </Link>
           </li>
           <li className="nav-item menu-active">
@@ -100,7 +102,7 @@ const Sidebar = () => {
               data-bs-target="#AproposDropdown"
               aria-expanded="false"
             >
-              <span className="me-1 "><HiOutlineHome size={25} /></span>A PROPOS
+              <span className="me-2 "><BiMessageError size={25} /></span>A PROPOS
             </a>
             <ul className="collapse list-unstyled" id="AproposDropdown">
               <li>
@@ -117,7 +119,7 @@ const Sidebar = () => {
           </li>
           <li className="nav-item">
             <Link className="nav-link menu-navigation menu-active" to="/">
-            <span className="me-1 "><HiOutlineHome size={25} /></span> CONTACT
+            <span className="me-1 "><BiPhone size={25} /></span> CONTACT
             </Link>
           </li>
         </ul>
