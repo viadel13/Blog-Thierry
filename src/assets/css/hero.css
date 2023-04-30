@@ -5,6 +5,18 @@
   width: 100%;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #fff;
+  border-radius: 50px;
+  padding: 9px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  --swiper-navigation-size: 44px;
+
+}
 
 .Yourpain{
 width: 100%;

@@ -12,8 +12,14 @@
     filter: brightness(0.3) contrast(0.9);
   }
 
-  .mySwiper{
+  .mySwiper {
     height: 50vh;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    --swiper-navigation-size: 30px;
+
   }
 
   .hero-slider {
@@ -98,8 +104,9 @@
   }
 
   .mySwiper {
-    height: 50vh;
+    height: 60vh;
   }
+
 
   .hero-slider {
     filter: brightness(0.3) contrast(0.9);
@@ -149,6 +156,7 @@
     flex-basis: 0;
     flex-grow: 1;
   }
+
   .section2 {
     background-image: url('../images/body_bg.jpg');
     background-size: cover;

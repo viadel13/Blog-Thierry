@@ -9,17 +9,16 @@ import hero3 from "../../assets/images/hero3.jpg";
 import YouPain from "../../assets/images/you.png";
 
 const Hero = () => {
-
   SwiperCore.use([Navigation, Pagination, Autoplay]);
 
   return (
     <>
-     <Swiper
+      <Swiper
         navigation
         pagination={{ clickable: true }}
         loop={true}
         className="mySwiper"
-        autoplay={{delay: 4000}}
+        autoplay={{ delay: 4000 }}
       >
         <SwiperSlide>
           <img src={hero3} className="d-block  hero-slider" alt="hero" />
@@ -41,7 +40,6 @@ const Hero = () => {
           <img src={YouPain} className="d-block Yourpain" alt="Yourpain" />
         </SwiperSlide>
       </Swiper>
-   
     </>
   );
 };
