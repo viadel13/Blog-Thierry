@@ -118,7 +118,7 @@ const Sidebar = () => {
             </ul>
           </li>
           <li className="nav-item">
-            <Link className="nav-link menu-navigation menu-active" to="/">
+            <Link className="nav-link menu-navigation menu-active" to="/contact">
             <span className="me-1 "><BiPhone size={25} /></span> CONTACT
             </Link>
           </li>

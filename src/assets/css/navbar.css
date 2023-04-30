@@ -1,7 +1,12 @@
 
 .navbar-scroll{
-    background-color: rgb(104, 100, 100)
+    background-color: #050000;
 }
+.navbar-page{
+    background-color: #050000;
+}
+
+
 .navbar-expand-lg .navbar-nav .nav-item .menu-active:hover {
    color: rgb(255, 149, 0);
    letter-spacing: 2px;

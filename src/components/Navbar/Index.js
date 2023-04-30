@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "../../assets/css/navbar.css";
 import Sidebar from "../Sidebar/Index";
 
-const Navbar = () => {
+const Navbar = ({contactMount}) => {
   const [navbarBackground, setNavbarBackground] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
       <nav
         className={`navbar navbar-expand-lg  fixed-top ${
           navbarBackground ? "navbar-scroll" : ""
-        }`}
+        } ${contactMount ? 'navbar-page' : ""}`}
       >
         <div className="container-fluid">
           <Link className="navbar-brand titre" to="/">
@@ -137,8 +137,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   className="nav-link menu-navigation menu-active"
-                  id="s"
-                  to="/"
+                  to="/contact"
                 >
                   CONTACT
                 </Link>
