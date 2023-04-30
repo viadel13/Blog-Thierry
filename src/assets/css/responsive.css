@@ -12,7 +12,7 @@
     filter: brightness(0.3) contrast(0.9);
   }
 
-  .carousel-item {
+  .mySwiper{
     height: 50vh;
   }
 
@@ -97,7 +97,7 @@
     font-size: 1.5em;
   }
 
-  .carousel-item {
+  .mySwiper {
     height: 50vh;
   }
 

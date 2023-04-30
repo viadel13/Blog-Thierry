@@ -1,0 +1,379 @@
+import { useEffect, useState } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import hero2 from "../../assets/images/hero2.jpg";
+import hero3 from "../../assets/images/hero3.jpg";
+import YouPain from "../../assets/images/you.png";
+
+const Hero = () => {
+  // const [slides, setSlides] = useState([]);
+
+  // useEffect(() => {
+    // Récupérer le tableau des slides à partir du localStorage s'il existe
+    // const slidesFromLocalStorage = localStorage.getItem("slides");
+    // if (slidesFromLocalStorage) {
+    //   setSlides(JSON.parse(slidesFromLocalStorage));
+    // } else {
+      // Ajouter les images en slide à un tableau et le stocker dans le localStorage
+  //     const images = [hero3, hero2, YouPain];
+  //     const slides = images.map((image) => ({
+  //       image,
+  //       caption: "Some representative placeholder content",
+  //     }));
+  //     localStorage.setItem("slides", JSON.stringify(slides));
+  //     setSlides(slides);
+  //   }
+  // }, []);
+
+  SwiperCore.use([Navigation, Pagination, Autoplay]);
+
+  return (
+    <>
+     
+      {/* <div
+        id="carouselExampleCaptions"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-indicators">
+          {slides.map((slide, index) => (
+            <button
+              key={index}
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to={index}
+              className={index === 0 ? "active" : ""}
+              aria-current={index === 0 ? "true" : "false"}
+              aria-label={`Slide ${index + 1}`}
+            ></button>
+          ))}
+        </div>
+        <div className="carousel-inner">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? "active" : ""}`}
+              id="slide-Your"
+            >
+              <img
+                src={slide.image}
+                className= {`d-block w-100 ${index === 0 || index === 1 ? 'hero-slider' : 'Yourpain'}`}
+                alt="hero"
+              />
+              <div className="carousel-caption">
+                <h5>{`Slide ${index + 1} label`}</h5>
+                <p>{slide.caption}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div> */}
+    </>
+  );
+};
+
+export default Hero;
+
+
+
+
+/*css*/
+
+.hero-slider {
+  filter: brightness(0.3) contrast(0.9);
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-item {
+	height: 100vh;
+	min-height: 300px;
+}
+
+.Yourpain{
+width: 100%;
+object-fit: cover;
+height: 100vh;
+}
+#slide-Your{
+  background-color: rgba(3, 3, 3, 0.349);
+}
+
+
+/* 
+.btn-box a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #e93f1a;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.btn-box a:hover {
+  background-color: transparent;
+  border-color: #e93f1a;
+  color: #e93f1a;
+} */
+
+.carousel-caption{
+  margin: 50px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item .menu-active {
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.container .navbar-brand{
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff !important;
+  text-transform: uppercase;
+}
+
+/* responsive */
+
+/* Navbar */
+
+@media (max-width: 768px) {
+  .container-fluid .navbar-brand {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ffffff !important;
+    text-transform: uppercase;
+  }
+
+  .hero-slider {
+    filter: brightness(0.3) contrast(0.9);
+  }
+
+  .carousel-item {
+    height: 50vh;
+  }
+
+  .hero-slider {
+    filter: brightness(0.3) contrast(0.9);
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .Yourpain {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .carousel-caption {
+    margin: 5px;
+  }
+
+  /*body */
+
+  .iconDescrip {
+    font-size: 1.5em;
+    margin: 0 20px;
+    padding: 20px;
+    background-color: rgb(224, 60, 60);
+    border-radius: 50%;
+    color: white;
+    box-shadow: 1px 4px 23px rgba(83, 83, 83, 0.712);
+    justify-content: center;
+  }
+
+  .textIcon {
+    font-size: 1em !important;
+    color: rgb(44, 46, 46);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+
+  .card .col-md-4 {
+    flex-basis: 0;
+    flex-grow: 0.6;
+  }
+
+  .card .col-md-4 img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card .col-md-8 {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .section2 {
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    padding: 80px 45px;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  .container-fluid .navbar-brand {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .offcanvas-header h5 {
+    font-size: 1.5em;
+  }
+
+  .offcanvas-body .navbar-nav .nav-item .nav-link {
+    font-size: 1.5em;
+  }
+
+  .carousel-item {
+    height: 50vh;
+  }
+
+  .hero-slider {
+    filter: brightness(0.3) contrast(0.9);
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .Yourpain {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .iconDescrip {
+    font-size: 3em;
+    margin: 0 50px;
+    padding: 20px;
+    background-color: rgb(224, 60, 60);
+    border-radius: 50%;
+    color: white;
+    box-shadow: 1px 4px 23px rgba(83, 83, 83, 0.712);
+    justify-content: center;
+  }
+
+  .textIcon {
+    font-size: 1em !important;
+    color: rgb(44, 46, 46);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+
+  .card .col-md-4 {
+    flex-basis: 0;
+    flex-grow: 0.8;
+  }
+
+  .card .col-md-4 img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card .col-md-8 {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .section2 {
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    padding: 80px 45px;
+  }
+
+}
+
+@media screen and (min-width : 991px) {
+
+  .container-fluid .navbar-brand {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #ffffff !important;
+    text-transform: uppercase;
+  }
+
+  .hero_area .navbar {
+    padding: 10px 90px;
+  }
+
+  .iconDescrip {
+    font-size: 3em;
+    margin: 0 80px;
+    padding: 35px;
+    background-color: rgb(224, 60, 60);
+    border-radius: 50%;
+    color: white;
+    box-shadow: 1px 4px 23px rgba(83, 83, 83, 0.712);
+  }
+
+  .textIcon {
+    font-size: 1.6em !important;
+    color: rgb(44, 46, 46);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+
+  .card .col-md-4 {
+    flex-basis: 0;
+    flex-grow: 0.8;
+  }
+
+  .card .col-md-4 img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card .col-md-8 {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .section2 {
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    padding: 10px 45px;
+  }
+
+}
