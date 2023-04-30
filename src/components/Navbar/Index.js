@@ -22,7 +22,7 @@ const Navbar = ({contactMount}) => {
     <>
     <Sidebar />
       <nav
-        className={`navbar navbar-expand-lg  fixed-top ${
+        className={`navbar navbar-expand-lg fixed-top  ${
           navbarBackground ? "navbar-scroll" : ""
         } ${contactMount ? 'navbar-page' : ""}`}
       >

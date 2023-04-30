@@ -1,0 +1,97 @@
+.container-contact {
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+
+}
+
+.layout_padding2-top {
+    padding: 45px 0;
+}
+
+.contact_section {
+    display: flex;
+    align-items: center;
+}
+
+.contact_section .contact_bg {
+    background-color: #ffffff;
+}
+
+.contact_section .heading_container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.contact_section .contact_form {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.contact_section .contact_form .top_input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.contact_section .contact_form .top_input input {
+    width: 48%;
+}
+
+.contact_section .contact_form input {
+    width: 100%;
+    margin: 15px 0;
+    height: 50px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    background-color: #1c1b2d;
+    color: #ffffff;
+}
+
+.contact_section .contact_form input.message_input {
+    padding: 25px 0 90px 15px;
+}
+
+.contact_section .contact_form input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact_section .contact_form input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact_section .contact_form input::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact_section .contact_form input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact_section .contact_form button {
+    display: inline-block;
+    padding: 8px 35px;
+    background-color: #e93f1a;
+    color: #ffffff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 45px;
+}
+
+.contact_section .contact_form button:hover {
+    background-color: transparent;
+    border-color: #e93f1a;
+    color: #e93f1a;
+}
+
+.contact_section .img-box img {
+    width: 100%;
+}
