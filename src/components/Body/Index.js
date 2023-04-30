@@ -61,7 +61,7 @@ const Body = () => {
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card mb-3 card1-body">
               <div class="row g-0">
-                <div class="col-md-4 d-lg-none d-md-none">
+                <div class="col-md-4">
                   <img
                     src={affiche2}
                     class="img-fluid rounded-start"
@@ -80,13 +80,6 @@ const Body = () => {
                       <small class="text-muted">Last updated 3 mins ago</small>
                     </p>
                   </div>
-                </div>
-                <div class="col-md-4 d-none d-lg-block d-sm-block">
-                  <img
-                    src={affiche2}
-                    class="img-fluid rounded-start"
-                    alt="affiche"
-                  />
                 </div>
               </div>
             </div>
