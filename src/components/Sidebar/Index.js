@@ -8,18 +8,18 @@ import "../../assets/css/sidebar.css";
 const Sidebar = () => {
   return (
     <div
-      class="offcanvas offcanvas-start"
+      className="offcanvas offcanvas-start"
       tabIndex="-1"
       id="offcanvasExample"
       aria-labelledby="offcanvasExampleLabel"
     >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+      <div className="offcanvas-header">
+        <h5 className="offcanvas-title" id="offcanvasExampleLabel">
           Thierry Fouomene
         </h5>
         <button
           type="button"
-          class="btn-close"
+          className="btn-close"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
         ></button>

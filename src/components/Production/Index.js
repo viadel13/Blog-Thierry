@@ -3,12 +3,20 @@ import { Link } from "react-router-dom";
 import "../../assets/css/production.css";
 import Navbar from "../Navbar/Index";
 import Footer from "../Footer/Index";
+import datasMenu from "../../DatasMenu/Index";
+import ProducteurYourPainMine from "./ProducteurYourPainMine";
 
-const Production = () => {
+
+const Production = (props) => {
+
   const [componentMount, setComponentMount] = useState(false);
   const [menuActive, setMenuActive] = useState("");
   const [activeLinkComponentMount, setActiveLinkComponentMount] =
     useState(false);
+    
+  const menuSearch = datasMenu.find(i=>i.id === props.id)
+  const showComposantMenu = menuSearch ? menuSearch.menu : <ProducteurYourPainMine />
+
   const addActive = (val) => {
     setMenuActive(val);
   };
@@ -34,11 +42,11 @@ const Production = () => {
           <h1 className="text-center">Production</h1>
         </div>
         <div className="container">
-          <ul class="nav nav-tabs justify-content-center mt-5">
-            <li class="nav-item">
+          <ul className="nav nav-tabs justify-content-center mt-5">
+            <li className="nav-item">
               <Link
                 aria-current="page"
-                to="#"
+                to="/producteurYourPainMe"
                 className={`nav-link ${
                   activeLinkComponentMount ? "active" : null
                 } ${menuActive === "producteurYourPainMe" ? "active" : null}`}
@@ -47,10 +55,9 @@ const Production = () => {
                 Producteur - Your Pain Mine
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link
-                class="nav-link"
-                to="#"
+                to="/coProducteur"
                 className={`nav-link ${
                   menuActive === "coProducteur" ? "active" : null
                 }`}
@@ -60,10 +67,9 @@ const Production = () => {
               </Link>
             </li>
 
-            <li class="nav-item">
+            <li className="nav-item">
               <Link
-                class="nav-link"
-                to="#"
+                to="/producteurExecutif"
                 className={`nav-link ${
                   menuActive === "ProduteurExecutif" ? "active" : null
                 }`}
@@ -74,7 +80,7 @@ const Production = () => {
             </li>
           </ul>
           <div className="detailsProduction">
-          
+                {showComposantMenu}
           </div>
         </div>
       </div>

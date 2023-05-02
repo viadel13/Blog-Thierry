@@ -3,12 +3,17 @@ import { useEffect, useState } from "react";
 import Navbar from "../Navbar/Index";
 import Footer from "../Footer/Index";
 import { Link } from "react-router-dom";
+import Cinema from "./Cinema";
+import datasMenu from "../../DatasMenu/Index";
 
-const DirecteurArtistique = () => {
+const DirecteurArtistique = (props) => {
+
   const [componentMount, setComponentMount] = useState(false);
   const [menuActive, setMenuActive] = useState("");
-  const [activeLinkComponentMount, setActiveLinkComponentMount] =
-    useState(false);
+  const [activeLinkComponentMount, setActiveLinkComponentMount] = useState(false);
+
+  const menuSearch = datasMenu.find(i=>i.id === props.id)
+  const showComposantMenu = menuSearch ? menuSearch.menu : <Cinema />
 
   const addActive = (val) => {
     setMenuActive(val);
@@ -36,11 +41,11 @@ const DirecteurArtistique = () => {
           <h1 className="text-center">Directeur Artistique</h1>
         </div>
         <div className="container">
-          <ul class="nav nav-tabs justify-content-center mt-5">
-            <li class="nav-item">
+          <ul className="nav nav-tabs justify-content-center mt-5">
+            <li className="nav-item">
               <Link
                 aria-current="page"
-                to="#"
+                to="/cinema"
                 className={`nav-link ${
                   activeLinkComponentMount ? "active" : null
                 } ${menuActive === "cinema" ? "active" : null}`}
@@ -49,10 +54,9 @@ const DirecteurArtistique = () => {
                 Cinema
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link
-                class="nav-link"
-                to="#"
+                to="/theatre"
                 className={`nav-link ${
                   menuActive === "theatre" ? "active" : null
                 }`}
@@ -61,10 +65,9 @@ const DirecteurArtistique = () => {
                 Theatre
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link
-                class="nav-link"
-                to="#"
+                to="/musique"
                 className={`nav-link ${
                   menuActive === "musique" ? "active" : null
                 }`}
@@ -76,7 +79,7 @@ const DirecteurArtistique = () => {
         
           </ul>
           <div className="detailsDirecteurArtistique">
-                
+            {showComposantMenu}
           </div>
         </div>
       </div>
