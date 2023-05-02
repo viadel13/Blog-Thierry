@@ -48,12 +48,12 @@ const Sidebar = () => {
             </Link>
             <ul className=" collapse list-unstyled " id="portfolioDropdown">
               <li>
-                <Link className="dropdown-item ms-5" to="/">
+                <Link className="dropdown-item ms-5" to="/project">
                   PROJECTS
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item ms-5" to="/">
+                <Link className="dropdown-item ms-5" to="/production">
                   PRODUCTION
                 </Link>
               </li>
@@ -84,12 +84,12 @@ const Sidebar = () => {
             </ul>
           </li>
           <li className="nav-item">
-            <Link className="nav-link menu-navigation menu-active" to="/">
-            <span className="me-1 "><MdPersonOutline size={25} /></span> AUTEUR
+            <Link className="nav-link menu-navigation menu-active" to="/auteur">
+            <span className="me-1 "><MdPersonOutline size={25} /></span> AUTEURS
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link menu-navigation menu-active" to="/">
+            <Link className="nav-link menu-navigation menu-active" to="/directeurArtistique">
             <span className="me-1 "><AiOutlineForm size={25} /></span> DIRECTEUR ARTISTIQUE
             </Link>
           </li>
@@ -106,7 +106,7 @@ const Sidebar = () => {
             </Link>
             <ul className="collapse list-unstyled" id="AproposDropdown">
               <li>
-                <Link className="dropdown-item ms-5" to="/">
+                <Link className="dropdown-item ms-5 " to="/">
                   BIOGRAPHIE
                 </Link>
               </li>

@@ -7,8 +7,13 @@ import "swiper/swiper-bundle.css";
 import hero2 from "../../assets/images/hero2.jpg";
 import hero3 from "../../assets/images/hero3.jpg";
 import YouPain from "../../assets/images/you.png";
+import { useEffect } from "react";
 
 const Hero = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  }, [])
+  
   SwiperCore.use([Navigation, Pagination, Autoplay]);
 
   return (

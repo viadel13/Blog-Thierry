@@ -5,21 +5,23 @@ import contact from "../../assets/images/contact-img.jpg";
 import Footer from "../Footer/Index";
 
 const Contact = () => {
-  const [contactMount, setContactMount] = useState(false);
+  const [componentMount, setComponentMount] = useState(false);
 
   useEffect(() => {
-    setContactMount(true);
+    setComponentMount(true);
+    window.scrollTo(0, 0);
 
-    return () => setContactMount(false);
+    return () => setComponentMount(false);
   }, []);
+
 
   return (
     <>
-      <Navbar contactMount={contactMount} />
+      <Navbar componentMount={componentMount} />
       <div className="container-fluid container-contact contact_section">
         <div class="container">
           <div class="heading_container">
-            <h2 className="text-center">Let's Get In Touch!</h2>
+            <h2 className="text-center">Prenons contact!</h2>
           </div>
           <div class="container contact_bg layout_padding2-top">
             <div class="row">

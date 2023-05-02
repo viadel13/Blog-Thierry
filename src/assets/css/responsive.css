@@ -82,15 +82,46 @@
     background-size: cover;
     padding: 80px 45px;
   }
+
   .contact_section .contact_bg {
     background-color: #ffffff;
     padding: 5px;
   }
+
   .container-contact {
     background-image: url('../images/body_bg.jpg');
     background-size: cover;
     height: 100vh;
-}
+  }
+
+  .container-project {
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
+  .container-auteur {
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
+  .container-directeurArtistique{
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
+  .container-production{
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -175,11 +206,43 @@
     background-color: #ffffff;
     padding: 5px;
   }
+
   .container-contact {
     background-image: url('../images/body_bg.jpg');
     background-size: cover;
     height: 100vh;
-}
+  }
+
+  
+  .container-project {
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
+  .container-auteur {
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
+
+  .container-directeurArtistique{
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
+  .container-production{
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
 
 }
 
@@ -235,19 +298,51 @@
   .section2 {
     background-image: url('../images/body_bg.jpg');
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     padding: 10px 45px;
   }
+
   .container-contact {
     background-image: url('../images/body_bg.jpg');
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     padding: 10px 45px;
   }
+
   .contact_section .contact_bg {
     background-color: #ffffff;
     padding: 20px 50px;
-   
-}
+
+  }
+
+  
+  .container-project {
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
+  .container-auteur {
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
+  .container-directeurArtistique{
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
+  .container-production{
+    background-image: url('../images/body_bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 25px 0;
+  }
 
 }

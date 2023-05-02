@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "../../assets/css/navbar.css";
 import Sidebar from "../Sidebar/Index";
 
-const Navbar = ({contactMount}) => {
+const Navbar = ({componentMount}) => {
   const [navbarBackground, setNavbarBackground] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +24,7 @@ const Navbar = ({contactMount}) => {
       <nav
         className={`navbar navbar-expand-lg fixed-top  ${
           navbarBackground ? "navbar-scroll" : ""
-        } ${contactMount ? 'navbar-page' : ""}`}
+        } ${componentMount ? 'navbar-page' : ""}`}
       >
         <div className="container-fluid">
           <Link className="navbar-brand titre" to="/">
@@ -65,12 +65,12 @@ const Navbar = ({contactMount}) => {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/">
+                    <Link className="dropdown-item" to="/project">
                       PROJECTS
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/">
+                    <Link className="dropdown-item" to="/production">
                       PRODUCTION
                     </Link>
                   </li>
@@ -100,12 +100,12 @@ const Navbar = ({contactMount}) => {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link menu-navigation menu-active" to="/">
-                  AUTEUR
+                <Link className="nav-link menu-navigation menu-active" to="/auteur">
+                  AUTEURS
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link menu-navigation menu-active" to="/">
+                <Link className="nav-link menu-navigation menu-active" to="/directeurArtistique">
                   DIRECTEUR ARTISTIQUE
                 </Link>
               </li>
