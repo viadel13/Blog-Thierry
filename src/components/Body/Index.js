@@ -9,13 +9,13 @@ const Body = () => {
   const blurhashValue2 = "LMB3sY%MD%M}~WxuIoR+r;ofR-oe";
 
   const [loadImage, setLoadImage] = useState(false);
-  const [loadImage2, setLoadImage2] = useState(true);
+  const [loadImage2, setLoadImage2] = useState(false);
 
   const handleLoad = ()=>{
     setLoadImage(true)
   }
   const handleLoad2 = ()=>{
-    setLoadImage2(false)
+    setLoadImage2(true)
   }
 
   return (
@@ -54,7 +54,7 @@ const Body = () => {
                 {!loadImage && (
                     <Blurhash
                       hash={blurhashValue}
-                      className="w-100 h-100"
+                      className="w-100 h-100 "
                     />
                   )}
                   <img
@@ -88,13 +88,14 @@ const Body = () => {
                     <Blurhash
                       hash={blurhashValue2}
                       className="w-100 h-100"
-                      onLoad={handleLoad2}
+                 
                     />
                   )}
                   <img
                     src={affiche2}
                     class="img-fluid rounded-start"
                     alt="affiche"
+                    onLoad={handleLoad2}
                   />
                 </div>
                 <div class="col-md-8">
