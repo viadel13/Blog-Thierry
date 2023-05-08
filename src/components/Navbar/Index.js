@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import "../../assets/css/navbar.css";
 import Sidebar from "../Sidebar/Index";
 
 const Navbar = ({componentMount}) => {
   const [navbarBackground, setNavbarBackground] = useState(false);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 0;
       if (isScrolled !== navbarBackground) {
