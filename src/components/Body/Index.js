@@ -9,13 +9,13 @@ const Body = () => {
   const blurhashValue2 = "LMB3sY%MD%M}~WxuIoR+r;ofR-oe";
 
   const [loadImage, setLoadImage] = useState(false);
-  const [loadImage2, setLoadImage2] = useState(false);
+  const [loadImage2, setLoadImage2] = useState(true);
 
   const handleLoad = ()=>{
     setLoadImage(true)
   }
   const handleLoad2 = ()=>{
-    setLoadImage2(true)
+    setLoadImage2(false)
   }
 
   return (
