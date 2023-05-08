@@ -15,11 +15,22 @@ const Hero = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const blurhashValue = "LAAcxW^$%dk7~VnnM|N2%JWUIof*";
+  const blurhashValue = "L4Eo*^0000^,:*.8.8I9D4yZ-=?H";
+  const blurhashValue2 = "LAAcxW^$%dk7~VnnM|N2%JWUIof*";
+  const blurhashValue3 = "L3EM5t000e~C:%.S?cDhmPysvM?v";
+  
   const[loadImage, setLoadImage]= useState(false)
+  const[loadImage2, setLoadImage2]= useState(false)
+  const[loadImage3, setLoadImage3]= useState(false)
 
   const handleLoad = ()=>{
     setLoadImage(true)
+  }
+  const handleLoad2 = ()=>{
+    setLoadImage2(true)
+  }
+  const handleLoad3 = ()=>{
+    setLoadImage3(true)
   }
 
   SwiperCore.use([Navigation, Pagination, Autoplay]);
@@ -45,8 +56,10 @@ const Hero = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-        
-          <img src={hero2} alt="hero" className="d-block w-100 h-100 hero-slider"/>
+          {
+            !loadImage2 && <Blurhash hash={blurhashValue2} className="d-block w-100 h-100 hero-slider"  />
+          }
+          <img src={hero2} alt="hero" className="d-block w-100 h-100 hero-slider" onLoad={handleLoad2}/>
           <div className="carousel-caption carousel-customer">
             {/* <img src={YouPain} className="img-fluid Yourpain" alt="Yourpain" /> */}
             <h5 className="mt-4">Second slide label</h5>
@@ -54,7 +67,10 @@ const Hero = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="justify-content-center" id="slide-Your">
-          <img src={YouPain} className="d-block Yourpain" alt="Yourpain" />
+        {
+            loadImage3 && <Blurhash hash={blurhashValue3} className="d-block w-100 h-100"  />
+          }
+          <img src={YouPain} className="d-block Yourpain" alt="Yourpain" onLoad={handleLoad3} />
         </SwiperSlide>
       </Swiper>
     </>
