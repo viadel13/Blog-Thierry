@@ -1,8 +1,23 @@
 import affiche from "../../assets/images/affiche.jpg";
 import affiche2 from "../../assets/images/affiche2.jpeg";
 import { BsCameraReels, BsIncognito, BsLayers } from "react-icons/bs";
+import { Blurhash } from "react-blurhash";
+import { useState } from "react";
 
 const Body = () => {
+  const blurhashValue = "LCCFq^EK5Sbb}[NZNwV[9uoLxsWB";
+  const blurhashValue2 = "LMB3sY%MD%M}~WxuIoR+r;ofR-oe";
+
+  const [loadImage, setLoadImage] = useState(false);
+  const [loadImage2, setLoadImage2] = useState(false);
+
+  const handleLoad = ()=>{
+    setLoadImage(true)
+  }
+  const handleLoad2 = ()=>{
+    setLoadImage2(true)
+  }
+
   return (
     <>
       <div className="container mt-3">
@@ -36,10 +51,17 @@ const Body = () => {
             <div class="card mb-3">
               <div class="row g-0">
                 <div class="col-md-4">
+                {!loadImage && (
+                    <Blurhash
+                      hash={blurhashValue}
+                      className="w-100 h-100"
+                    />
+                  )}
                   <img
                     src={affiche}
                     class="img-fluid rounded-start"
                     alt="affiche"
+                    onLoad={handleLoad}
                   />
                 </div>
                 <div class="col-md-8">
@@ -62,6 +84,13 @@ const Body = () => {
             <div class="card mb-3 card1-body">
               <div class="row g-0">
                 <div class="col-md-4">
+                  {!loadImage2 && (
+                    <Blurhash
+                      hash={blurhashValue2}
+                      className="w-100 h-100"
+                      onLoad={handleLoad2}
+                    />
+                  )}
                   <img
                     src={affiche2}
                     class="img-fluid rounded-start"

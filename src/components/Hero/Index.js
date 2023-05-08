@@ -17,7 +17,7 @@ const Hero = () => {
 
   const blurhashValue = "L4Eo*^0000^,:*.8.8I9D4yZ-=?H";
   const blurhashValue2 = "LAAcxW^$%dk7~VnnM|N2%JWUIof*";
-  const blurhashValue3 = "L3EM5t000e~C:%.S?cDhmPysvM?v";
+  const blurhashValue3 = "LHSidIfk_NxaxuayV@of_Nof8_R*";
   
   const[loadImage, setLoadImage]= useState(false)
   const[loadImage2, setLoadImage2]= useState(false)
@@ -67,8 +67,8 @@ const Hero = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="justify-content-center" id="slide-Your">
-        {
-            loadImage3 && <Blurhash hash={blurhashValue3} className="d-block w-100 h-100"  />
+          {
+            !loadImage3 && <Blurhash hash={blurhashValue3} className="d-block w-100 h-100"  />
           }
           <img src={YouPain} className="d-block Yourpain" alt="Yourpain" onLoad={handleLoad3} />
         </SwiperSlide>
