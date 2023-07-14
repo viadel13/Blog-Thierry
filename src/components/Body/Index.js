@@ -1,12 +1,22 @@
 import affiche from "../../assets/images/affiche.jpg";
 import affiche2 from "../../assets/images/affiche2.jpeg";
 import { BsCameraReels, BsIncognito, BsLayers } from "react-icons/bs";
+import { useInView } from 'react-intersection-observer';
 
 const Body = () => {
+
+  const { ref: myRef1, inView: visible1 } = useInView();
+  const { ref: myRef2, inView: visible2 } = useInView();
+ 
+  const { ref: myRef, inView: visible } = useInView();
+
+
+
+
   return (
     <>
       <div className="container mt-3">
-        <div className="row">
+        <div className={`row ${visible1 ? "visible1" : "invisible1"}`} ref={myRef1}>
           <div className="col-12">
             <div className="d-flex justify-content-center mb-5">
               <div>
@@ -31,7 +41,7 @@ const Body = () => {
           </div>
         </div>
 
-        <div className="row">
+        <div className={`row ${visible2 ? "visible2" : "invisible2"}`}  ref={myRef2}>
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card mb-3">
               <div class="row g-0">
@@ -87,22 +97,25 @@ const Body = () => {
         </div>
       </div>
       <div className="container-fluid mt-4 section2">
-        <div className="container">
+        <div className={`container ${visible ? "visible" : "invisible"}`}  ref={myRef}>
           <div className="row">
             <div class="col-md-6">
-              <div class="box">
+              <div  className="box">
                 <div class="img-box">
                   {/* <img src="images/s-1.png" alt=""> */}
                 </div>
-                <h4>Written with Love</h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters, as opposed to using 'Content
-                  here, content t,
-                </p>
-                <a href="">Read More</a>
+             
+                    <h4>Written with Love</h4>
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout. The point of using Lorem Ipsum is that it
+                      has a more-or-less normal distribution of letters, as
+                      opposed to using 'Content here, content t,
+                    </p>
+                    <a href="">Read More</a>
+                  
+             
               </div>
             </div>
             <div class="col-md-6">
@@ -122,7 +135,7 @@ const Body = () => {
               </div>
             </div>
           </div>
-          <div className="row ">
+          <div className="row">
             <div class="col-md-6">
               <div class="box">
                 <div class="img-box">

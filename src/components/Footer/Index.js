@@ -6,12 +6,14 @@ import whatsapp from "../../assets/images/whatsapp.png";
 import whatsapp2 from "../../assets/images/whatsapp2.png";
 import "../../assets/css/footer.css";
 import { Link } from "react-router-dom";
+import { useInView } from 'react-intersection-observer';
 
 const Footer = () => {
+  const { ref: myRef, inView: visible } = useInView();
   return (
     <>
       <section className="info_section layout_padding">
-        <div className="footer_contact">
+        <div className={`footer_contact ${visible ? "visible3" : "invisible3"}`} ref={myRef}>
           <div className="heading_container">
             <h2>Contact Us</h2>
           </div>
