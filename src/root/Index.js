@@ -1,16 +1,26 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../components/Home/Index';
+import React from 'react';
+// import Home from '../components/Home/Index';
 import Contact from '../components/Contact/Index';
 import Project from '../components/Project/Index';
 import Auteur from '../components/Auteur/Index';
 import DirecteurArtistique from '../components/DirecteurArtistique/Index';
 import Production from '../components/Production/Index';
+const LazyBlog = React.lazy(()=>import('../components/Home/Index'));
 
 const Root = () => {
   return (
     <Router>
         <Routes>
-            <Route path='/' element={<Home />} />
+            <Route 
+              path='/' 
+              element={
+                <React.Suspense fallback={<div>Chargement...</div>} >
+                  <LazyBlog />
+                </React.Suspense>
+              } 
+            
+            />
             <Route path='/contact' element={<Contact />} />
             <Route path='/project' element={<Project />} />
             <Route path='/auteur' element={<Auteur />} />
