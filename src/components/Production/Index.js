@@ -1,22 +1,16 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "../../assets/css/production.css";
 import Navbar from "../Navbar/Index";
 import Footer from "../Footer/Index";
-import datasMenu from "../../DatasMenu/Index";
-import ProducteurYourPainMine from "./ProducteurYourPainMine";
 
-
-const Production = (props) => {
+const Production = () => {
 
   const [componentMount, setComponentMount] = useState(false);
   const [menuActive, setMenuActive] = useState("");
   const [activeLinkComponentMount, setActiveLinkComponentMount] =
     useState(false);
     
-  const menuSearch = datasMenu.find(i=>i.id === props.id)
-  const showComposantMenu = menuSearch ? menuSearch.menu : <ProducteurYourPainMine />
-
   const addActive = (val) => {
     setMenuActive(val);
   };
@@ -46,7 +40,7 @@ const Production = (props) => {
             <li className="nav-item">
               <Link
                 aria-current="page"
-                to="/producteurYourPainMe"
+                to="producteurYourPainMe"
                 className={`nav-link ${
                   activeLinkComponentMount ? "active" : null
                 } ${menuActive === "producteurYourPainMe" ? "active" : null}`}
@@ -57,7 +51,7 @@ const Production = (props) => {
             </li>
             <li className="nav-item">
               <Link
-                to="/coProducteur"
+                to="coProducteur"
                 className={`nav-link ${
                   menuActive === "coProducteur" ? "active" : null
                 }`}
@@ -69,7 +63,7 @@ const Production = (props) => {
 
             <li className="nav-item">
               <Link
-                to="/producteurExecutif"
+                to="producteurExecutif"
                 className={`nav-link ${
                   menuActive === "ProduteurExecutif" ? "active" : null
                 }`}
@@ -80,7 +74,7 @@ const Production = (props) => {
             </li>
           </ul>
           <div className="detailsProduction">
-                {showComposantMenu}
+                <Outlet />
           </div>
         </div>
       </div>

@@ -43,25 +43,26 @@ const Body = () => {
 
         <div className={`row ${visible2 ? "visible2" : "invisible2"}`}  ref={myRef2}>
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-md-4">
+            <div className="card mb-3">
+              <div className="row g-0">
+                <div className="col-md-4">
                   <img
                     src={affiche}
-                    class="img-fluid rounded-start"
+                    className="img-fluid rounded-start"
                     alt="affiche"
+                    loading="lazy"
                   />
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">
                       This is a wider card with supporting text below as a
                       natural lead-in to additional content. This content is a
                       little bit longer.
                     </p>
-                    <p class="card-text">
-                      <small class="text-muted">Last updated 3 mins ago</small>
+                    <p className="card-text">
+                      <small className="text-muted">Last updated 3 mins ago</small>
                     </p>
                   </div>
                 </div>
@@ -69,25 +70,26 @@ const Body = () => {
             </div>
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="card mb-3 card1-body">
-              <div class="row g-0">
-                <div class="col-md-4">
+            <div className="card mb-3 card1-body">
+              <div className="row g-0">
+                <div className="col-md-4">
                   <img
                     src={affiche2}
-                    class="img-fluid rounded-start"
+                    className="img-fluid rounded-start"
                     alt="affiche"
+                    loading="lazy"
                   />
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">
                       This is a wider card with supporting text below as a
                       natural lead-in to additional content. This content is a
                       little bit longer.
                     </p>
-                    <p class="card-text">
-                      <small class="text-muted">Last updated 3 mins ago</small>
+                    <p className="card-text">
+                      <small className="text-muted">Last updated 3 mins ago</small>
                     </p>
                   </div>
                 </div>
@@ -99,9 +101,9 @@ const Body = () => {
       <div className="container-fluid mt-4 section2">
         <div className={`container ${visible ? "visible" : "invisible"}`}  ref={myRef}>
           <div className="row">
-            <div class="col-md-6">
+            <div className="col-md-6">
               <div  className="box">
-                <div class="img-box">
+                <div className="img-box">
                   {/* <img src="images/s-1.png" alt=""> */}
                 </div>
              
@@ -118,9 +120,9 @@ const Body = () => {
              
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="box">
-                <div class="img-box">
+            <div className="col-md-6">
+              <div className="box">
+                <div className="img-box">
                   {/* <img src="images/s-1.png" alt=""> */}
                 </div>
                 <h4>Written with Love</h4>
@@ -136,9 +138,9 @@ const Body = () => {
             </div>
           </div>
           <div className="row">
-            <div class="col-md-6">
-              <div class="box">
-                <div class="img-box">
+            <div className="col-md-6">
+              <div className="box">
+                <div className="img-box">
                   {/* <img src="images/s-1.png" alt=""> */}
                 </div>
                 <h4>Written with Love</h4>
@@ -152,9 +154,9 @@ const Body = () => {
                 <a href="">Read More</a>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="box">
-                <div class="img-box">
+            <div className="col-md-6">
+              <div className="box">
+                <div className="img-box">
                   {/* <img src="images/s-1.png" alt=""> */}
                 </div>
                 <h4>Written with Love</h4>

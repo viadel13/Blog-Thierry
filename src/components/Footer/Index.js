@@ -19,15 +19,15 @@ const Footer = () => {
           </div>
           <div className="box">
             <Link to="/" className="img-box">
-              <img src={call} alt="call" className="img-1" />
+              <img src={call} alt="call" className="img-1"  loading="lazy" />
               <img src={call2} alt="call2" className="img-2" />
             </Link>
             <Link to="/" className="img-box">
-              <img src={envelope} alt="envelope" className="img-1" />
+              <img src={envelope} alt="envelope" className="img-1"  loading="lazy" />
               <img src={envelope2} alt="" className="img-2" />
             </Link>
             <Link to="/" className="img-box">
-              <img src={whatsapp} width={50} height={45} alt="whatsapp" className="img-1" />
+              <img src={whatsapp} width={50} height={45} alt="whatsapp" className="img-1"  loading="lazy" />
               <img src={whatsapp2} width={50} height={45}  alt="whatsapp2" className="img-2" />
             </Link>
           </div>

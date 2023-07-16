@@ -2,18 +2,13 @@ import "../../assets/css/directeurArtistique.css";
 import { useEffect, useState } from "react";
 import Navbar from "../Navbar/Index";
 import Footer from "../Footer/Index";
-import { Link } from "react-router-dom";
-import Cinema from "./Cinema";
-import datasMenu from "../../DatasMenu/Index";
+import { Link, Outlet } from "react-router-dom";
 
-const DirecteurArtistique = (props) => {
+const DirecteurArtistique = () => {
 
   const [componentMount, setComponentMount] = useState(false);
   const [menuActive, setMenuActive] = useState("");
   const [activeLinkComponentMount, setActiveLinkComponentMount] = useState(false);
-
-  const menuSearch = datasMenu.find(i=>i.id === props.id)
-  const showComposantMenu = menuSearch ? menuSearch.menu : <Cinema />
 
   const addActive = (val) => {
     setMenuActive(val);
@@ -45,7 +40,7 @@ const DirecteurArtistique = (props) => {
             <li className="nav-item">
               <Link
                 aria-current="page"
-                to="/cinema"
+                to="cinema"
                 className={`nav-link ${
                   activeLinkComponentMount ? "active" : null
                 } ${menuActive === "cinema" ? "active" : null}`}
@@ -56,7 +51,7 @@ const DirecteurArtistique = (props) => {
             </li>
             <li className="nav-item">
               <Link
-                to="/theatre"
+                to="theatre"
                 className={`nav-link ${
                   menuActive === "theatre" ? "active" : null
                 }`}
@@ -67,7 +62,7 @@ const DirecteurArtistique = (props) => {
             </li>
             <li className="nav-item">
               <Link
-                to="/musique"
+                to="musique"
                 className={`nav-link ${
                   menuActive === "musique" ? "active" : null
                 }`}
@@ -79,7 +74,7 @@ const DirecteurArtistique = (props) => {
         
           </ul>
           <div className="detailsDirecteurArtistique">
-            {showComposantMenu}
+            <Outlet />
           </div>
         </div>
       </div>

@@ -1,42 +1,59 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import React from 'react';
-// import Home from '../components/Home/Index';
-import Contact from '../components/Contact/Index';
-import Project from '../components/Project/Index';
-import Auteur from '../components/Auteur/Index';
-import DirecteurArtistique from '../components/DirecteurArtistique/Index';
-import Production from '../components/Production/Index';
-const LazyBlog = React.lazy(()=>import('../components/Home/Index'));
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import Contact from "../components/Contact/Index";
+import Project from "../components/Project/Index";
+import Auteur from "../components/Auteur/Index";
+import DirecteurArtistique from "../components/DirecteurArtistique/Index";
+import Production from "../components/Production/Index";
+import Scenariste from "../components/Auteur/Scenariste";
+import Realisateur from "../components/Auteur/Realisateur";
+import ProducteurYourPainMine from "../components/Production/ProducteurYourPainMine";
+import ProducteurExecutif from "../components/Production/ProducteurExecutif";
+import CoProducteur from "../components/Production/CoProducteur";
+import Cinema from "../components/DirecteurArtistique/Cinema";
+import Theatre from "../components/DirecteurArtistique/Theatre";
+import Musique from "../components/DirecteurArtistique/Musique";
+const LazyBlog = React.lazy(() => import("../components/Home/Index"));
 
 const Root = () => {
   return (
     <Router>
-        <Routes>
-            <Route 
-              path='/' 
-              element={
-                <React.Suspense fallback={<div>Chargement...</div>} >
-                  <LazyBlog />
-                </React.Suspense>
-              } 
-            
-            />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/project' element={<Project />} />
-            <Route path='/auteur' element={<Auteur />} />
-            <Route path='/directeurArtistique' element={<DirecteurArtistique />} />
-            <Route path='/production' element={<Production/>} />
-            <Route path='/producteurYourPainMe' element={<Production id='1'/>} />
-            <Route path='/coProducteur' element={<Production id='2' />} />
-            <Route path='/producteurExecutif' element={<Production id='3' />} />
-            <Route path='/scenariste' element={<Auteur id='4' />} />
-            <Route path='/realisateur' element={<Auteur id='5' />} />
-            <Route path='/cinema' element={<DirecteurArtistique id='6' />} />
-            <Route path='/theatre' element={<DirecteurArtistique id='7' />} />
-            <Route path='/musique' element={<DirecteurArtistique id='8' />} />
-        </Routes>
-    </Router>
-  )
-}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <React.Suspense fallback={<div>Chargement...</div>}>
+              <LazyBlog />
+            </React.Suspense>
+          }
+        />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/project" element={<Project />} />
 
-export default Root
+        <Route path="/auteur" element={<Auteur />}>
+          <Route index element={<Scenariste />} />
+          <Route path="scenariste" element={<Scenariste />} />
+          <Route path="realisateur" element={<Realisateur />} />
+        </Route>
+        <Route path="/directeurArtistique" element={<DirecteurArtistique />}>
+          <Route index element={<Cinema />} />
+          <Route path="cinema" element={<Cinema />} />
+          <Route path="theatre" element={<Theatre />} />
+          <Route path="musique" element={<Musique />} />
+        </Route>
+
+        <Route path="/production" element={<Production />}>
+          <Route index element={<ProducteurYourPainMine />} />
+          <Route
+            path="producteurYourPainMe"
+            element={<ProducteurYourPainMine />}
+          />
+          <Route path="coProducteur" element={<CoProducteur />} />
+          <Route path="producteurExecutif" element={<ProducteurExecutif />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+};
+
+export default Root;

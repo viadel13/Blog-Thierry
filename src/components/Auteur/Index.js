@@ -1,19 +1,19 @@
 import "../../assets/css/auteur.css";
 import { useEffect, useState } from "react";
 import Navbar from "../Navbar/Index";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Footer from "../Footer/Index";
-import datasMenu from "../../DatasMenu/Index";
-import Scenariste from "./Scenariste";
+// import datasMenu from "../../DatasMenu/Index";
+// import Scenariste from "./Scenariste";
 
-const Auteur = (props) => {
+const Auteur = () => {
   const [componentMount, setComponentMount] = useState(false);
   const [menuActive, setMenuActive] = useState("");
   const [activeLinkComponentMount, setActiveLinkComponentMount] = useState(false);
 
       
-  const menuSearch = datasMenu.find(i=>i.id === props.id)
-  const showComposantMenu = menuSearch ? menuSearch.menu : <Scenariste />
+  // const menuSearch = datasMenu.find(i=>i.id === props.id)
+  // const showComposantMenu = menuSearch ? menuSearch.menu : <Scenariste />
 
   const addActive = (val) => {
     setMenuActive(val);
@@ -45,7 +45,7 @@ const Auteur = (props) => {
             <li className="nav-item">
               <Link
                 aria-current="page"
-                to="/scenariste"
+                to="scenariste"
                 className={`nav-link ${
                   activeLinkComponentMount ? "active" : null
                 } ${menuActive === "scenariste" ? "active" : null}`}
@@ -56,7 +56,7 @@ const Auteur = (props) => {
             </li>
             <li className="nav-item">
               <Link
-                to="/realisateur"
+                to="realisateur"
                 className={`nav-link ${
                   menuActive === "realisateur" ? "active" : null
                 }`}
@@ -68,7 +68,7 @@ const Auteur = (props) => {
         
           </ul>
           <div className="detailsAuteur">
-            {showComposantMenu}       
+            <Outlet />
           </div>
         </div>
       </div>
